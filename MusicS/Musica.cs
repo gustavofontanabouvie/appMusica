@@ -3,20 +3,21 @@ class Musica
 {
 
     //construtor para sempre adicionar uma banda quando se cria uma musica
-    public Musica(Banda artista, string nome)
+    public Musica(Artista artista, string nome,Genero genero)
     {
         //sempre que eu criar um objeto da classe Musica, vou precisar passar
         //uma banda ja existente
+        Genero = genero;
         Artista = artista;
         Nome = nome;
         //esse Artista que recebe o parametro é uma propriedade de Musica
     }
 
     public string Nome { get; }
-    public Banda Artista { get; }
+    public Genero Genero { get;}
+    public Artista Artista { get; }
     public int Duracao {  get; set; }
     public bool Disponivel { get; set; }
-    public Genero Genero { get; set; }
     public string DescricaoResumida => $"A musica {Nome} pertence a {Artista.Nome}";
 
 

@@ -1,9 +1,9 @@
-﻿class Banda
+﻿class Artista
 {
     public string Nome { get; }
     private List<Album> albuns = new List<Album>();
 
-    public Banda(string nome)
+    public Artista(string nome)
     {
         Nome = nome;
     }
@@ -14,7 +14,7 @@
 
     public void ListarAlbuns()
     {
-        Console.WriteLine($"Discografia da banda {Nome}");
+        Console.WriteLine($"Discografia do artista {Nome}");
         foreach (Album album in albuns)
         {
             Console.WriteLine($"Album: {album.Nome}(Duração: {album.DuracaoTotal})");
